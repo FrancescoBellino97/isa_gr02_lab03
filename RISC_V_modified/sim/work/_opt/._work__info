@@ -1,0 +1,145 @@
+m255
+13
+cModel Technology
+d/home/isa02/Desktop/Lab3/RISC-V_modified/sim
+T_opt
+VTU]zL3WR=253@hmY9j4An1
+06 9 4 ./work testbench fast 0
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /testbench/DUT=../netlist/Risc_V.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2g;35
+Eclock_gen
+w1612175813
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/clock_gen.vhd
+F../tb/clock_gen.vhd
+l0
+L6
+VKiTE=>D1am9naED5H<dcZ3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work clock_gen KiTE=>D1am9naED5H<dcZ3
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+l17
+L11
+V]SWTbOM=[b[=9iQ6_UIX71
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Eram_data
+w1612175813
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/RAM_data.vhd
+F../tb/RAM_data.vhd
+l0
+L5
+V0X>]3_A9e9zQTY66l<M]a1
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work ram_data 0X>]3_A9e9zQTY66l<M]a1
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l18
+L13
+VUTZ=canZM@UObZLO3@=OO2
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+vRisc_V
+ILR?Zjf5P=FmgT:4RMczj@3
+VNZ57l7cIfFD=dDBo:Xkf93
+w1612184688
+8../netlist/Risc_V.v
+F../netlist/Risc_V.v
+L0 8
+VNZ57l7cIfFD=dDBo:Xkf93
+OE;L;6.2g;35
+r1
+31
+o-work ./work
+n@risc_@v
+Erom_instruction
+w1612175813
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/ROM_instruction.vhd
+F../tb/ROM_instruction.vhd
+l0
+L5
+V@X9m`4d_Mk8eLTRA`==LC3
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abehavior
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work rom_instruction @X9m`4d_Mk8eLTRA`==LC3
+31
+M2 ieee std_logic_1164
+M1 ieee numeric_std
+l13
+L11
+VlVKc=jc03aV<UM2dN2`j61
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Erst_gen
+w1612175813
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+31
+8../tb/rst_gen.vhd
+F../tb/rst_gen.vhd
+l0
+L6
+V09I;Laf[_>5_BV1K]j[[R0
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+Abeh
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work rst_gen 09I;Laf[_>5_BV1K]j[[R0
+31
+M3 ieee std_logic_1164
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+l13
+L11
+V@KQ:@UA@3hWIZTSmL0HHG2
+OE;C;6.2g;35
+o-93 -work ./work
+tExplicit 1
+vtestbench
+I`[;;LIGaYk_IIhg=]BYbo1
+VhGfW:390DM[oDMzegDH9`2
+w1612175813
+8../tb/testbench.v
+F../tb/testbench.v
+L0 3
+VhGfW:390DM[oDMzegDH9`2
+OE;L;6.2g;35
+r1
+31
+o-work ./work
