@@ -1,0 +1,141 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'Risc_V' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Risc_V
+Version: O-2018.06-SP4
+Date   : Mon Feb  1 14:04:20 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: First_Reg_of_pipe/d_out1_reg[20]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: IF_Stage/PC/CurrentIstruction_reg[31]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Risc_V             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  First_Reg_of_pipe/d_out1_reg[20]/CK (DFFR_X1)           0.00 #     0.00 r
+  First_Reg_of_pipe/d_out1_reg[20]/Q (DFFR_X1)            0.14       0.14 r
+  First_Reg_of_pipe/d_out1[20] (Rpipe_IF_ID_N32)          0.00       0.14 r
+  ID_Stage/Instr_code[20] (ID_N32)                        0.00       0.14 r
+  ID_Stage/Register_FIle/Add_Rs2[0] (Reg_file_N32)        0.00       0.14 r
+  ID_Stage/Register_FIle/U558/ZN (INV_X1)                 0.04       0.18 f
+  ID_Stage/Register_FIle/U3372/ZN (AND2_X1)               0.05       0.23 f
+  ID_Stage/Register_FIle/U176/Z (BUF_X1)                  0.04       0.27 f
+  ID_Stage/Register_FIle/U4084/Z (CLKBUF_X1)              0.08       0.35 f
+  ID_Stage/Register_FIle/U4075/ZN (AOI22_X1)              0.08       0.43 r
+  ID_Stage/Register_FIle/U4077/ZN (NAND4_X1)              0.05       0.47 f
+  ID_Stage/Register_FIle/U4078/ZN (AOI22_X1)              0.06       0.54 r
+  ID_Stage/Register_FIle/U4079/ZN (OAI221_X1)             0.05       0.58 f
+  ID_Stage/Register_FIle/Rd_data2[31] (Reg_file_N32)      0.00       0.58 f
+  ID_Stage/Choose_RS2_or_WB/first_choice[31] (mux2to1_32bit_N32_1)
+                                                          0.00       0.58 f
+  ID_Stage/Choose_RS2_or_WB/U13/ZN (AOI22_X1)             0.05       0.63 r
+  ID_Stage/Choose_RS2_or_WB/U12/ZN (INV_X1)               0.03       0.66 f
+  ID_Stage/Choose_RS2_or_WB/dato_chosen[31] (mux2to1_32bit_N32_1)
+                                                          0.00       0.66 f
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/in2[31] (Check_jmp)
+                                                          0.00       0.66 f
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/U12/Z (XOR2_X1)
+                                                          0.07       0.73 f
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/U5/ZN (NOR4_X1)
+                                                          0.09       0.83 r
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/U3/ZN (NAND4_X1)
+                                                          0.05       0.87 f
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/U1/ZN (NOR2_X1)
+                                                          0.05       0.92 r
+  ID_Stage/CompareRs1_Rs2_for_beqInstruction/beq (Check_jmp)
+                                                          0.00       0.92 r
+  ID_Stage/Choose_if_is_or_not_BeqInstr/second_choice (mux_2to1)
+                                                          0.00       0.92 r
+  ID_Stage/Choose_if_is_or_not_BeqInstr/U3/ZN (AOI22_X1)
+                                                          0.03       0.95 f
+  ID_Stage/Choose_if_is_or_not_BeqInstr/U2/ZN (INV_X1)
+                                                          0.02       0.98 r
+  ID_Stage/Choose_if_is_or_not_BeqInstr/dato_chosen (mux_2to1)
+                                                          0.00       0.98 r
+  ID_Stage/U3/ZN (OR2_X1)                                 0.05       1.02 r
+  ID_Stage/sel_jmp_seq (ID_N32)                           0.00       1.02 r
+  IF_Stage/sel_jmp_seq (Instruction_Fetch_N32)            0.00       1.02 r
+  IF_Stage/Mux_jmp_or_seq1/sel (mux2to1_32bit_N32_4)      0.00       1.02 r
+  IF_Stage/Mux_jmp_or_seq1/U12/Z (BUF_X1)                 0.04       1.07 r
+  IF_Stage/Mux_jmp_or_seq1/U4/Z (BUF_X1)                  0.04       1.11 r
+  IF_Stage/Mux_jmp_or_seq1/U2/ZN (INV_X1)                 0.05       1.16 f
+  IF_Stage/Mux_jmp_or_seq1/U16/ZN (AOI22_X1)              0.06       1.22 r
+  IF_Stage/Mux_jmp_or_seq1/U15/ZN (INV_X1)                0.03       1.25 f
+  IF_Stage/Mux_jmp_or_seq1/dato_chosen[2] (mux2to1_32bit_N32_4)
+                                                          0.00       1.25 f
+  IF_Stage/Adder_Plus_4/in1[2] (adder_32bit_N32_2)        0.00       1.25 f
+  IF_Stage/Adder_Plus_4/add_18/A[2] (adder_32bit_N32_2_DW01_add_0)
+                                                          0.00       1.25 f
+  IF_Stage/Adder_Plus_4/add_18/U1_2/CO (FA_X1)            0.10       1.35 f
+  IF_Stage/Adder_Plus_4/add_18/U1_3/CO (FA_X1)            0.09       1.44 f
+  IF_Stage/Adder_Plus_4/add_18/U1_4/CO (FA_X1)            0.09       1.53 f
+  IF_Stage/Adder_Plus_4/add_18/U1_5/CO (FA_X1)            0.09       1.62 f
+  IF_Stage/Adder_Plus_4/add_18/U1_6/CO (FA_X1)            0.09       1.71 f
+  IF_Stage/Adder_Plus_4/add_18/U1_7/CO (FA_X1)            0.09       1.80 f
+  IF_Stage/Adder_Plus_4/add_18/U1_8/CO (FA_X1)            0.09       1.89 f
+  IF_Stage/Adder_Plus_4/add_18/U1_9/CO (FA_X1)            0.09       1.98 f
+  IF_Stage/Adder_Plus_4/add_18/U1_10/CO (FA_X1)           0.09       2.07 f
+  IF_Stage/Adder_Plus_4/add_18/U1_11/CO (FA_X1)           0.09       2.16 f
+  IF_Stage/Adder_Plus_4/add_18/U1_12/CO (FA_X1)           0.09       2.25 f
+  IF_Stage/Adder_Plus_4/add_18/U1_13/CO (FA_X1)           0.09       2.34 f
+  IF_Stage/Adder_Plus_4/add_18/U1_14/CO (FA_X1)           0.09       2.43 f
+  IF_Stage/Adder_Plus_4/add_18/U1_15/CO (FA_X1)           0.09       2.52 f
+  IF_Stage/Adder_Plus_4/add_18/U1_16/CO (FA_X1)           0.09       2.61 f
+  IF_Stage/Adder_Plus_4/add_18/U1_17/CO (FA_X1)           0.09       2.70 f
+  IF_Stage/Adder_Plus_4/add_18/U1_18/CO (FA_X1)           0.09       2.79 f
+  IF_Stage/Adder_Plus_4/add_18/U1_19/CO (FA_X1)           0.09       2.88 f
+  IF_Stage/Adder_Plus_4/add_18/U1_20/CO (FA_X1)           0.09       2.97 f
+  IF_Stage/Adder_Plus_4/add_18/U1_21/CO (FA_X1)           0.09       3.06 f
+  IF_Stage/Adder_Plus_4/add_18/U1_22/CO (FA_X1)           0.09       3.16 f
+  IF_Stage/Adder_Plus_4/add_18/U1_23/CO (FA_X1)           0.09       3.25 f
+  IF_Stage/Adder_Plus_4/add_18/U1_24/CO (FA_X1)           0.09       3.34 f
+  IF_Stage/Adder_Plus_4/add_18/U1_25/CO (FA_X1)           0.09       3.43 f
+  IF_Stage/Adder_Plus_4/add_18/U1_26/CO (FA_X1)           0.09       3.52 f
+  IF_Stage/Adder_Plus_4/add_18/U1_27/CO (FA_X1)           0.09       3.61 f
+  IF_Stage/Adder_Plus_4/add_18/U1_28/CO (FA_X1)           0.09       3.70 f
+  IF_Stage/Adder_Plus_4/add_18/U1_29/CO (FA_X1)           0.09       3.79 f
+  IF_Stage/Adder_Plus_4/add_18/U1_30/CO (FA_X1)           0.09       3.88 f
+  IF_Stage/Adder_Plus_4/add_18/U1_31/S (FA_X1)            0.13       4.01 r
+  IF_Stage/Adder_Plus_4/add_18/SUM[31] (adder_32bit_N32_2_DW01_add_0)
+                                                          0.00       4.01 r
+  IF_Stage/Adder_Plus_4/result[31] (adder_32bit_N32_2)
+                                                          0.00       4.01 r
+  IF_Stage/PC/nextIstruction[31] (pc_register_N32)        0.00       4.01 r
+  IF_Stage/PC/U11/ZN (NAND2_X1)                           0.03       4.04 f
+  IF_Stage/PC/U10/ZN (OAI21_X1)                           0.03       4.07 r
+  IF_Stage/PC/CurrentIstruction_reg[31]/D (DFFR_X1)       0.01       4.07 r
+  data arrival time                                                  4.07
+
+  clock MY_CLK (rise edge)                               14.00      14.00
+  clock network delay (ideal)                             0.00      14.00
+  clock uncertainty                                      -0.07      13.93
+  IF_Stage/PC/CurrentIstruction_reg[31]/CK (DFFR_X1)      0.00      13.93 r
+  library setup time                                     -0.03      13.90
+  data required time                                                13.90
+  --------------------------------------------------------------------------
+  data required time                                                13.90
+  data arrival time                                                 -4.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        9.82
+
+
+1

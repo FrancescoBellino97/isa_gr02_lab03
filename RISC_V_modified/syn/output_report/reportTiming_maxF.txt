@@ -1,0 +1,212 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'Risc_V' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Risc_V
+Version: O-2018.06-SP4
+Date   : Mon Feb  1 12:04:47 2021
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: Fourth_Reg_of_pipe/Rd_add_o_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: Third_Reg_of_pipe/Add_mem_o_reg[30]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Risc_V             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Fourth_Reg_of_pipe/Rd_add_o_reg[2]/CK (DFFR_X1)         0.00 #     0.00 r
+  Fourth_Reg_of_pipe/Rd_add_o_reg[2]/Q (DFFR_X1)          0.16       0.16 r
+  Fourth_Reg_of_pipe/Rd_add_o[2] (RegMEM_WB_N32)          0.00       0.16 r
+  Execution_Unit_Stage/rd_add_wb_in[2] (execution_unit)
+                                                          0.00       0.16 r
+  Execution_Unit_Stage/FORWARD_UNIT/rd_add_wb[2] (forwarding_unit)
+                                                          0.00       0.16 r
+  Execution_Unit_Stage/FORWARD_UNIT/U35/Z (XOR2_X1)       0.05       0.21 f
+  Execution_Unit_Stage/FORWARD_UNIT/U46/ZN (NOR3_X1)      0.06       0.28 r
+  Execution_Unit_Stage/FORWARD_UNIT/U12/ZN (NAND2_X1)     0.03       0.31 f
+  Execution_Unit_Stage/FORWARD_UNIT/U19/ZN (OAI21_X1)     0.06       0.37 r
+  Execution_Unit_Stage/FORWARD_UNIT/alu_src2[0] (forwarding_unit)
+                                                          0.00       0.37 r
+  Execution_Unit_Stage/MUX2/sel[0] (mux_4to1_N32_1)       0.00       0.37 r
+  Execution_Unit_Stage/MUX2/U115/ZN (INV_X1)              0.03       0.40 f
+  Execution_Unit_Stage/MUX2/U32/ZN (AND2_X1)              0.05       0.45 f
+  Execution_Unit_Stage/MUX2/U46/ZN (AOI22_X1)             0.07       0.53 r
+  Execution_Unit_Stage/MUX2/U6/ZN (NAND2_X2)              0.07       0.60 f
+  Execution_Unit_Stage/MUX2/output[1] (mux_4to1_N32_1)
+                                                          0.00       0.60 f
+  Execution_Unit_Stage/ALU_COMP/data2[1] (alu)            0.00       0.60 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/in2[1] (sum_block)
+                                                          0.00       0.60 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/B[1] (sum_block_DW01_add_0)
+                                                          0.00       0.60 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U1_1/CO (FA_X1)
+                                                          0.12       0.72 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U1_2/CO (FA_X1)
+                                                          0.10       0.81 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U159/ZN (NAND2_X1)
+                                                          0.03       0.85 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U161/ZN (NAND3_X1)
+                                                          0.05       0.90 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U50/ZN (NAND2_X1)
+                                                          0.04       0.93 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U52/ZN (NAND3_X1)
+                                                          0.05       0.98 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U115/ZN (NAND2_X1)
+                                                          0.04       1.02 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U117/ZN (NAND3_X1)
+                                                          0.05       1.07 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U90/ZN (NAND2_X1)
+                                                          0.04       1.11 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U34/ZN (NAND3_X1)
+                                                          0.04       1.15 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U95/ZN (NAND2_X1)
+                                                          0.03       1.18 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U98/ZN (NAND3_X1)
+                                                          0.05       1.23 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U61/ZN (NAND2_X1)
+                                                          0.04       1.27 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U63/ZN (NAND3_X1)
+                                                          0.05       1.31 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U24/ZN (NAND2_X1)
+                                                          0.04       1.35 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U26/ZN (NAND3_X1)
+                                                          0.05       1.40 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U38/ZN (NAND2_X1)
+                                                          0.04       1.43 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U40/ZN (NAND3_X1)
+                                                          0.05       1.48 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U127/ZN (NAND2_X1)
+                                                          0.04       1.52 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U129/ZN (NAND3_X1)
+                                                          0.05       1.56 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U134/ZN (NAND2_X1)
+                                                          0.04       1.60 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U136/ZN (NAND3_X1)
+                                                          0.05       1.65 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U44/ZN (NAND2_X1)
+                                                          0.04       1.68 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U46/ZN (NAND3_X1)
+                                                          0.05       1.73 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U147/ZN (NAND2_X1)
+                                                          0.04       1.77 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U149/ZN (NAND3_X1)
+                                                          0.04       1.82 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U153/ZN (NAND2_X1)
+                                                          0.03       1.85 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U155/ZN (NAND3_X1)
+                                                          0.05       1.90 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U12/ZN (NAND2_X1)
+                                                          0.04       1.93 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U14/ZN (NAND3_X1)
+                                                          0.05       1.98 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U103/ZN (NAND2_X1)
+                                                          0.04       2.02 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U105/ZN (NAND3_X1)
+                                                          0.05       2.06 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U108/ZN (NAND2_X1)
+                                                          0.04       2.10 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U111/ZN (NAND3_X1)
+                                                          0.05       2.15 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U18/ZN (NAND2_X1)
+                                                          0.04       2.18 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U20/ZN (NAND3_X1)
+                                                          0.05       2.23 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U78/ZN (NAND2_X1)
+                                                          0.04       2.27 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U33/ZN (NAND3_X1)
+                                                          0.04       2.32 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U83/ZN (NAND2_X1)
+                                                          0.04       2.35 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U64/ZN (NAND3_X1)
+                                                          0.04       2.39 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U71/ZN (NAND2_X1)
+                                                          0.03       2.42 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U74/ZN (NAND3_X1)
+                                                          0.05       2.47 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U6/ZN (NAND2_X1)
+                                                          0.04       2.51 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U8/ZN (NAND3_X1)
+                                                          0.05       2.55 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U121/ZN (NAND2_X1)
+                                                          0.05       2.60 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U123/ZN (NAND3_X1)
+                                                          0.04       2.64 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U141/ZN (NAND2_X1)
+                                                          0.03       2.67 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U130/ZN (NAND3_X1)
+                                                          0.04       2.71 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U165/ZN (NAND2_X1)
+                                                          0.04       2.75 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U168/ZN (NAND3_X1)
+                                                          0.04       2.79 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U172/ZN (NAND2_X1)
+                                                          0.03       2.82 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U174/ZN (NAND3_X1)
+                                                          0.05       2.87 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U178/ZN (NAND2_X1)
+                                                          0.04       2.91 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U180/ZN (NAND3_X1)
+                                                          0.04       2.96 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U185/ZN (NAND2_X1)
+                                                          0.04       2.99 r
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U162/ZN (NAND3_X1)
+                                                          0.04       3.03 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U181/Z (CLKBUF_X1)
+                                                          0.04       3.08 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/U189/Z (XOR2_X1)
+                                                          0.07       3.14 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/add_17/SUM[30] (sum_block_DW01_add_0)
+                                                          0.00       3.14 f
+  Execution_Unit_Stage/ALU_COMP/ADDER/result[30] (sum_block)
+                                                          0.00       3.14 f
+  Execution_Unit_Stage/ALU_COMP/MUX/input1[30] (mux_8to1_N32)
+                                                          0.00       3.14 f
+  Execution_Unit_Stage/ALU_COMP/MUX/U3/ZN (AOI22_X1)      0.05       3.20 r
+  Execution_Unit_Stage/ALU_COMP/MUX/U58/ZN (NAND4_X1)     0.04       3.24 f
+  Execution_Unit_Stage/ALU_COMP/MUX/output[30] (mux_8to1_N32)
+                                                          0.00       3.24 f
+  Execution_Unit_Stage/ALU_COMP/result[30] (alu)          0.00       3.24 f
+  Execution_Unit_Stage/MUX_OUT/input1[30] (mux_4to1_N32_0)
+                                                          0.00       3.24 f
+  Execution_Unit_Stage/MUX_OUT/U13/ZN (AOI22_X1)          0.06       3.29 r
+  Execution_Unit_Stage/MUX_OUT/U31/ZN (NAND2_X1)          0.03       3.32 f
+  Execution_Unit_Stage/MUX_OUT/output[30] (mux_4to1_N32_0)
+                                                          0.00       3.32 f
+  Execution_Unit_Stage/add_mem[30] (execution_unit)       0.00       3.32 f
+  Third_Reg_of_pipe/Add_mem[30] (RegEX_MEM_N32)           0.00       3.32 f
+  Third_Reg_of_pipe/U5/ZN (NAND2_X1)                      0.03       3.35 r
+  Third_Reg_of_pipe/U4/ZN (OAI21_X1)                      0.03       3.38 f
+  Third_Reg_of_pipe/Add_mem_o_reg[30]/D (DFFR_X1)         0.01       3.39 f
+  data arrival time                                                  3.39
+
+  clock MY_CLK (rise edge)                                3.50       3.50
+  clock network delay (ideal)                             0.00       3.50
+  clock uncertainty                                      -0.07       3.43
+  Third_Reg_of_pipe/Add_mem_o_reg[30]/CK (DFFR_X1)        0.00       3.43 r
+  library setup time                                     -0.04       3.39
+  data required time                                                 3.39
+  --------------------------------------------------------------------------
+  data required time                                                 3.39
+  data arrival time                                                 -3.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
