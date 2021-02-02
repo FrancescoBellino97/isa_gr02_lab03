@@ -1,0 +1,1 @@
+/home/isa02/Desktop/Lab3/RISC-V_modified/netlist/Risc_V.sdc
